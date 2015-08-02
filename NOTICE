@@ -1,0 +1,12 @@
+This product includes software developed by Actian Corporation (http://www.actian.com/).
+
+In addition, this product includes the following software:
+
+Jayway JsonPath 2.0 (https://github.com/jayway/JsonPath) which is a JSONPath engine for extracting data from JSON
+objects using JSONPath expressions.  It uses the Apache 2.0 License (http://www.apache.org/licenses/LICENSE-2.0).
+
+Jayway JsonPath 2.0 includes software from Netplex json-smart (https://github.com/netplex/json-smart-v2) a fast JSON
+parser for Java.   It is also licensed under the Apache 2.0 License.
+
+Google google-gson (https://github.com/google/gson) an alternate JSON parser for Java.   It is licensed under the
+Apache 2.0 License.

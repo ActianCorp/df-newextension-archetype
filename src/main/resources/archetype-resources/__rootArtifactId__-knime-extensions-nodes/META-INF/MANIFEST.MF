@@ -1,0 +1,22 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Actian ${artifactId} plug-in
+Bundle-SymbolicName: ${groupId}.knime.${rootArtifactId}.nodes;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: ${groupId}.knime.${rootArtifactId}.Activator
+Bundle-Vendor: Actian Corporation
+Eclipse-RegisterBuddy: com.pervasive.datarush.core.runtime
+Require-Bundle: 
+ org.eclipse.osgi,
+ com.pervasive.datarush.core.runtime,
+ com.pervasive.datarush.knime.core.runtime;resolution:=optional,
+ com.pervasive.datarush.knime.core.ui;resolution:=optional,
+ org.junit4;bundle-version="4.8.1";resolution:=optional
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-ActivationPolicy: lazy
+Comment: Todo: *** Add any other dependencies for newoperator in the Bundle-Classpath ***
+Bundle-ClassPath: .,
+ target/lib/slf4j-api.jar,
+ target/lib/ant-contrib.jar,
+ target/lib/${groupId}.knime.${rootArtifactId}.nodes.jar,
+ target/lib/${rootArtifactId}-dataflow-extensions.jar

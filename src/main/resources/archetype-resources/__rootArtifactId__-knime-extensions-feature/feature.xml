@@ -1,0 +1,69 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Copyright 2015 Actian Corporation
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+-->
+<feature
+        id="${package}.knime.${parentArtifactId}.feature"
+        label="Actian ${parentArtifactId} component"
+        version="1.0.0.qualifier"
+        provider-name="Actian Corporation">
+
+    <description>This is the Actian ${parentArtifactId} component feature.</description>
+
+    <copyright>Copyright 2015 Actian Corporation</copyright>
+
+    <license>
+        LICENSE
+
+        Licensed under the Apache License, Version 2.0 (the "License");
+        you may not use this file except in compliance with the License.
+        You may obtain a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+        Unless required by applicable law or agreed to in writing, software
+        distributed under the License is distributed on an "AS IS" BASIS,
+        WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+        See the License for the specific language governing permissions and
+        limitations under the License.
+
+    </license>
+
+    <url>
+        <update label="%UPDATE_SITE_NAME%" url="%UPDATE_SITE_URL%"/>
+    </url>
+
+    <requires>
+        <import feature="org.knime.features.base" version="2.9.0" match="compatible"/>
+    </requires>
+
+    <plugin
+            id="${package}.knime.${parentArtifactId}.nodes"
+            download-size="0"
+            install-size="0"
+            version="0.0.0"
+            unpack="true"/>
+
+    <plugin
+            id="${package}.knime.${parentArtifactId}.functions"
+            download-size="0"
+            install-size="0"
+            version="0.0.0"/>
+
+
+</feature>

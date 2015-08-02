@@ -1,0 +1,14 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature id="${package}.knime.${parentArtifactId}.feature">
+      <category name="actiandataflow"/>
+   </feature>
+   <category-def name="actiandataflow" label="Actian ${parentArtifactId} component">
+      <description>
+         Actian ${parentArtifactId} KNIME node and Actian DataFlow operator
+      </description>
+   </category-def>
+</site>

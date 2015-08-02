@@ -1,0 +1,19 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Actian Services ${artifactId} functions
+Bundle-SymbolicName: ${groupId}.knime.${rootArtifactId}.functions;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Vendor: Actian
+Fragment-Host: com.pervasive.datarush.core.runtime
+Require-Bundle: 
+ org.eclipse.osgi,
+ com.pervasive.datarush.knime.core.runtime;resolution:=optional,
+ com.pervasive.datarush.knime.core.ui;resolution:=optional
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-ActivationPolicy: lazy
+Comment: Todo: *** Add any other dependencies for newfunction in the Bundle-Classpath ***
+Bundle-ClassPath: .,
+ target/lib/slf4j-api.jar,
+ target/lib/ant-contrib.jar,
+ target/lib/${groupId}.knime.${rootArtifactId}.nodes.jar,
+ target/lib/${rootArtifactId}-dataflow-extensions.jar
