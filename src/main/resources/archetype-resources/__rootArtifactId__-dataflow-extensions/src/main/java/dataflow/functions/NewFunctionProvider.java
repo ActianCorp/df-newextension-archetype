@@ -26,7 +26,13 @@ public class NewFunctionProvider extends SimpleFunctionProvider {
 
     public NewFunctionProvider() {
 
-/* Todo: Delete the following to remove support for custom functions */
+#if ($include-function-support == "false")
+     /* Uncomment to add support for functions in the DataFlow extension
+#end
         register(NewFunctions.class);
+#if ($include-function-support == "false")
+     *
+     */
+#end
     }
 }

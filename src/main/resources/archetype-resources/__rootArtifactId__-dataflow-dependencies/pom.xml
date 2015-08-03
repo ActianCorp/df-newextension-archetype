@@ -18,7 +18,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
     <modelVersion>4.0.0</modelVersion>
-    <name>${artifactId}-dataflow-dependencies</name>
+    <name>${rootArtifactId}-dataflow-dependencies</name>
     <groupId>${groupId}</groupId>
     <artifactId>${artifactId}</artifactId>
     <packaging>pom</packaging>

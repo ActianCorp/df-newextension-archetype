@@ -59,11 +59,18 @@
             version="0.0.0"
             unpack="true"/>
 
+#if ($include-function-support == "false")
+<!-- Uncomment to add support for functions in the KNIME component
+#end
     <plugin
             id="${package}.knime.${parentArtifactId}.functions"
             download-size="0"
             install-size="0"
             version="0.0.0"/>
 
+#if ($include-function-support == "false")
+-->
+#end
 
-</feature>
+
+    </feature>

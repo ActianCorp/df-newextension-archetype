@@ -23,9 +23,9 @@
         <relativePath>../pom.xml</relativePath>
     </parent>
 
-    <artifactId>${artifactId}</artifactId>
+    <artifactId>${groupId}.${artifactId}</artifactId>
     <packaging>eclipse-plugin</packaging>
-    <name>${artifactId}-knime-extensions-functions</name>
+    <name>${rootArtifactId}-knime-extensions-functions</name>
     <description>Separate fragment to ensure functions are registered in KNIME</description>
 
     <build>

@@ -1,135 +1,153 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<archetype-descriptor xsi:schemaLocation="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0 http://maven.apache.org/xsd/archetype-descriptor-1.0.0.xsd" name="newextension"
-    xmlns="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<archetype-descriptor
+        xsi:schemaLocation="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0 http://maven.apache.org/xsd/archetype-descriptor-1.0.0.xsd"
+        name="newextension"
+        xmlns="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 
-  <fileSets>
-    <fileSet filtered = "true" encoding="UTF-8">
-      <directory>examples/KNIME</directory>
-      <includes>
-        <include>**/*.md</include>
-      </includes>
-    </fileSet>
-    <fileSet filtered="true" encoding="UTF-8">
-      <directory></directory>
-      <includes>
-        <include>README.md</include>
-      </includes>
-      <fileSet encoding="UTF-8">
-        <directory></directory>
-        <includes>
-          <include>.gitignore</include>
-          <include>CONTRIBUTING.md</include>
-          <include>LICENSE</include>
-          <include>NOTICE</include>
-        </includes>
-      </fileSet>
-    </fileSet>
-  </fileSets>
-  <modules>
-    <module id="${rootArtifactId}-dataflow-dependencies" dir="__rootArtifactId__-dataflow-dependencies" name="${rootArtifactId}-dataflow-dependencies">
-      <fileSets>
-      </fileSets>
-    </module>
-    <module id="${rootArtifactId}-dataflow-extensions" dir="__rootArtifactId__-dataflow-extensions" name="${rootArtifactId}-dataflow-extensions">
-      <fileSets>
-        <fileSet filtered="true" packaged="true" encoding="UTF-8">
-          <directory>src/main/java</directory>
-          <includes>
-            <include>**/*.java</include>
-          </includes>
-        </fileSet>
-        <fileSet encoding="UTF-8">
-          <directory>src/main/resources</directory>
-          <includes>
-            <include>**/*.FunctionProvider</include>
-          </includes>
-        </fileSet>
-      </fileSets>
-    </module>
-    <module id="com.actian.services.knime.${rootArtifactId}.feature" dir="__rootArtifactId__-knime-extensions-feature" name="com.actian.services.knime.${rootArtifactId}.feature">
-      <fileSets>
+    <requiredProperties>
+        <requiredProperty key="include-function-support">
+            <defaultValue>false</defaultValue>
+        </requiredProperty>
+    </requiredProperties>
+
+
+    <fileSets>
         <fileSet filtered="true" encoding="UTF-8">
-          <directory></directory>
-          <includes>
-            <include>build.properties</include>
-            <include>feature.xml</include>
-          </includes>
-        </fileSet>
-      </fileSets>
-    </module>
-    <module id="com.actian.services.knime.${rootArtifactId}.nodes" dir="__rootArtifactId__-knime-extensions-nodes" name="com.actian.services.knime.${rootArtifactId}.nodes">
-      <fileSets>
-        <fileSet filtered="true" packaged="true" encoding="UTF-8">
-          <directory>src/main/java</directory>
-          <includes>
-            <include>**/*.java</include>
-          </includes>
+            <directory>examples/KNIME</directory>
+            <includes>
+                <include>**/*.md</include>
+            </includes>
         </fileSet>
         <fileSet filtered="true" encoding="UTF-8">
-          <directory>src/main/resources</directory>
-          <includes>
-            <include>**/*.xml</include>
-          </includes>
+            <directory></directory>
+            <includes>
+                <include>README.md</include>
+            </includes>
+            <fileSet encoding="UTF-8">
+                <directory></directory>
+                <includes>
+                    <include>.gitignore</include>
+                    <include>CONTRIBUTING.md</include>
+                    <include>LICENSE</include>
+                    <include>NOTICE</include>
+                </includes>
+            </fileSet>
         </fileSet>
-        <fileSet encoding="UTF-8">
-          <directory>src/main/resources</directory>
-          <includes>
-            <include>**/*.png</include>
-          </includes>
-        </fileSet>
-        <fileSet encoding="UTF-8">
-          <directory>icons</directory>
-          <includes>
-            <include>**/*.png</include>
-          </includes>
-        </fileSet>
-        <fileSet filtered="true" encoding="UTF-8">
-          <directory>META-INF</directory>
-          <includes>
-            <include>**/*.MF</include>
-          </includes>
-        </fileSet>
-        <fileSet filtered="true" encoding="UTF-8">
-          <directory></directory>
-          <includes>
-            <include>build.properties</include>
-            <include>plugin.xml</include>
-          </includes>
-        </fileSet>
-      </fileSets>
-    </module>
-    <module id="com.actian.services.knime.${rootArtifactId}.functions" dir="__rootArtifactId__-knime-extensions-functions" name="com.actian.services.knime.${rootArtifactId}.functions">
-      <fileSets>
-        <fileSet filtered = "true" encoding="UTF-8">
-          <directory>META-INF</directory>
-          <includes>
-            <include>**/*.MF</include>
-          </includes>
-        </fileSet>
-        <fileSet filtered="true" encoding="UTF-8">
-          <directory></directory>
-          <includes>
-            <include>build.properties</include>
-          </includes>
-        </fileSet>
-      </fileSets>
-    </module>
-    <module id="com.actian.services.knime.${rootArtifactId}.update" dir="__rootArtifactId__-knime-extensions-update-site" name="com.actian.services.knime.${rootArtifactId}.update">
-      <fileSets>
-        <fileSet encoding="UTF-8">
-          <directory>icons</directory>
-          <includes>
-            <include>**/*.png</include>
-          </includes>
-        </fileSet>
-        <fileSet filtered="true" encoding="UTF-8">
-          <directory></directory>
-          <includes>
-            <include>category.xml</include>
-          </includes>
-        </fileSet>
-      </fileSets>
-    </module>
-  </modules>
+    </fileSets>
+    <modules>
+        <module id="${rootArtifactId}-dataflow-dependencies" dir="__rootArtifactId__-dataflow-dependencies"
+                name="${rootArtifactId}-dataflow-dependencies">
+            <fileSets>
+            </fileSets>
+        </module>
+        <module id="${rootArtifactId}-dataflow-extensions" dir="__rootArtifactId__-dataflow-extensions"
+                name="${rootArtifactId}-dataflow-extensions">
+            <fileSets>
+                <fileSet filtered="true" packaged="true" encoding="UTF-8">
+                    <directory>src/main/java</directory>
+                    <includes>
+                        <include>**/*.java</include>
+                    </includes>
+                </fileSet>
+                <fileSet encoding="UTF-8">
+                    <directory>src/main/resources</directory>
+                    <includes>
+                        <include>**/*.FunctionProvider</include>
+                    </includes>
+                </fileSet>
+            </fileSets>
+        </module>
+        <module id="knime.${rootArtifactId}.feature"
+                dir="__rootArtifactId__-knime-extensions-feature"
+                name="${groupId}.knime.${rootArtifactId}.feature">
+            <fileSets>
+                <fileSet filtered="true" encoding="UTF-8">
+                    <directory></directory>
+                    <includes>
+                        <include>build.properties</include>
+                        <include>feature.xml</include>
+                    </includes>
+                </fileSet>
+            </fileSets>
+        </module>
+        <module id="knime.${rootArtifactId}.nodes" dir="__rootArtifactId__-knime-extensions-nodes"
+                name="${groupId}.knime.${rootArtifactId}.nodes">
+            <fileSets>
+                <fileSet filtered="true" packaged="true" encoding="UTF-8">
+                    <directory>src/main/java</directory>
+                    <includes>
+                        <include>**/*.java</include>
+                    </includes>
+                </fileSet>
+                <fileSet filtered="true" packaged="true" encoding="UTF-8">
+                    <directory>src/main/resources</directory>
+                    <includes>
+                        <include>**/*.xml</include>
+                    </includes>
+                </fileSet>
+                <fileSet packaged="true" encoding="UTF-8">
+                    <directory>src/main/resources</directory>
+                    <includes>
+                        <include>**/*.png</include>
+                    </includes>
+                </fileSet>
+                <fileSet encoding="UTF-8">
+                    <directory>icons</directory>
+                    <includes>
+                        <include>**/*.png</include>
+                    </includes>
+                </fileSet>
+                <fileSet filtered="true" encoding="UTF-8">
+                    <directory>META-INF</directory>
+                    <includes>
+                        <include>**/*.MF</include>
+                    </includes>
+                </fileSet>
+                <fileSet filtered="true" encoding="UTF-8">
+                    <directory></directory>
+                    <includes>
+                        <include>build.properties</include>
+                        <include>plugin.xml</include>
+                    </includes>
+                </fileSet>
+            </fileSets>
+        </module>
+        <module id="knime.${rootArtifactId}.functions"
+                dir="__rootArtifactId__-knime-extensions-functions"
+                name="${groupId}.knime.${rootArtifactId}.functions">
+            <fileSets>
+                <fileSet filtered="true" encoding="UTF-8">
+                    <directory>META-INF</directory>
+                    <includes>
+                        <include>**/*.MF</include>
+                    </includes>
+                </fileSet>
+                <fileSet filtered="true" encoding="UTF-8">
+                    <directory></directory>
+                    <includes>
+                        <include>build.properties</include>
+                    </includes>
+                </fileSet>
+            </fileSets>
+        </module>
+        <module id="knime.${rootArtifactId}.update"
+                dir="__rootArtifactId__-knime-extensions-update-site"
+                name="${groupId}.knime.${rootArtifactId}.update">
+            <fileSets>
+                <fileSet encoding="UTF-8">
+                    <directory>icons</directory>
+                    <includes>
+                        <include>**/*.png</include>
+                    </includes>
+                </fileSet>
+                <fileSet filtered="true" encoding="UTF-8">
+                    <directory></directory>
+                    <includes>
+                        <include>category.xml</include>
+                    </includes>
+                </fileSet>
+            </fileSets>
+        </module>
+    </modules>
 </archetype-descriptor>

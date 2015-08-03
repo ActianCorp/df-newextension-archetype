@@ -18,16 +18,20 @@ To generate a new extension project in interactive mode run:
 
     mvn archetype:generate -Dfilter=com.actian.services:newextension-archetype
     
-You will be prompted for a groupId.  This groupId will be used generate package names, so it should be a prefix in
-reverse URI format (e.g. com.mycompany).  You will also be prompted for an artifactId.   This is used as the artifactId
+You will be prompted for a **groupId**.  This **groupId** will be used generate package names, so it should be a prefix in
+reverse URI format (e.g. com.mycompany.mydepartment).  You will also be prompted for an **artifactId**.   This is used as the artifactId
 for the top level POM and is used to generate package names, directory names and file names.  It should be a simple
 name in lower case that describes the project well (e.g. timeseries for a set of time series analysis components).
 
-Maven will also prompt for a version number.   This is currently not used as it doesn't work well with the OSGi artifacts
+Maven will also prompt for a **version** number.   This is currently not used as it doesn't work well with the OSGi artifacts
 used for KNIME.  A default version of 1.0.0-SNAPSHOT will be used instead.  The version can be changed easily after
 the project is created.
 
-The value used for package property should be the same as specified for the groupId.
+The value used for **package** property should be the same as specified for the **groupId**.
+
+The **include-function-support** property controls whether the archetype generates code with the sample custom
+function code enabled or disabled.  When this is has a value of **false** (default) the custom function code is
+commented out. 
 
 ```
 
@@ -51,24 +55,27 @@ Choose archetype:
 Choose a number or apply filter (format: [groupId:]artifactId, case sensitive contains): : 1
 Define value for property 'groupId': : com.actian.services
 Define value for property 'artifactId': : myoperator
-Define value for property 'version':  1.0-SNAPSHOT: :
+Define value for property 'version':  1.0-SNAPSHOT: : 1.0.0-SNAPSHOT
 Define value for property 'package':  com.actian.services: :
+[INFO] Using property: include-function-support = false
 Confirm properties configuration:
 groupId: com.actian.services
 artifactId: myoperator
-version: 1.0-SNAPSHOT
+version: 1.0.0-SNAPSHOT
 package: com.actian.services
- Y: : y
+include-function-support: false
+ Y: : Y
 [INFO] ----------------------------------------------------------------------------
 [INFO] Using following parameters for creating project from Archetype: newextension-archetype:1.0.0-SNAPSHOT
 [INFO] ----------------------------------------------------------------------------
 [INFO] Parameter: groupId, Value: com.actian.services
 [INFO] Parameter: artifactId, Value: myoperator
-[INFO] Parameter: version, Value: 1.0-SNAPSHOT
+[INFO] Parameter: version, Value: 1.0.0-SNAPSHOT
 [INFO] Parameter: package, Value: com.actian.services
 [INFO] Parameter: packageInPathFormat, Value: com/actian/services
+[INFO] Parameter: include-function-support, Value: false
 [INFO] Parameter: package, Value: com.actian.services
-[INFO] Parameter: version, Value: 1.0-SNAPSHOT
+[INFO] Parameter: version, Value: 1.0.0-SNAPSHOT
 [INFO] Parameter: groupId, Value: com.actian.services
 [INFO] Parameter: artifactId, Value: myoperator
 [INFO] Parent element not overwritten in /Users/myuser/projects/myoperator/myoperator-dataflow-dependencies/pom.xml
