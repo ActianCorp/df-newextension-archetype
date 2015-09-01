@@ -24,15 +24,15 @@
             <includes>
                 <include>README.md</include>
             </includes>
-            <fileSet encoding="UTF-8">
-                <directory></directory>
-                <includes>
-                    <include>.gitignore</include>
-                    <include>CONTRIBUTING.md</include>
-                    <include>LICENSE</include>
-                    <include>NOTICE</include>
-                </includes>
-            </fileSet>
+        </fileSet>
+        <fileSet encoding="UTF-8">
+            <directory></directory>
+            <includes>
+                <include>.gitignore</include>
+                <include>CONTRIBUTING.md</include>
+                <include>LICENSE</include>
+                <include>NOTICE</include>
+            </includes>
         </fileSet>
     </fileSets>
     <modules>

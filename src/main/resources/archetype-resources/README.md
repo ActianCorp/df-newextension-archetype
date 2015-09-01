@@ -1,15 +1,16 @@
-# ${artifactId}
+#set( $H = '#' )
+$H ${artifactId}
 
 ${artifactId} description
 
-## Configuration
+$H$H Configuration
 
 Before building ${artifactId} you need to define the following environment variables to point to the local DataFlow update site [dataflow-p2-site](https://github.com/ActianCorp/dataflow-p2-site) root directory and the DataFlow version.
 
     export DATAFLOW_REPO_HOME=/Users/myuser/dataflow-p2-site
     export DATAFLOW_VER=6.5.2.112
 
-## Building
+$H$H Building
 
 The update site is built using [Apache Maven 3.0.5 or later](http://maven.apache.org/).
 
@@ -23,7 +24,7 @@ You can update the version number by running
     
 where version is of the form x.y.z or x.y.z-SNAPSHOT.
 
-## Using ${artifactId} with the DataFlow Engine
+$H$H Using ${artifactId} with the DataFlow Engine
 
 The build generates a JAR file in the target directory under ${artifactId}-dataflow-extensions with a name similar to 
 
@@ -31,7 +32,7 @@ The build generates a JAR file in the target directory under ${artifactId}-dataf
 
 which can be included on the classpath when using the DataFlow engine.
 
-## Installing the ${artifactId} plug-in in KNIME
+$H$H Installing the ${artifactId} plug-in in KNIME
 
 The build also produces a ZIP file which can be used as an archive file with the KNIME 'Help/Install New Software...' dialog.
 The ZIP file can be found in the target directory under ${artifactId}-knime-extensions-update-site and with a name like 
